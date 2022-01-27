@@ -1,0 +1,107 @@
+section {
+    padding: 40px 0;
+
+    & .section__title {
+        color: gray;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1000;
+    
+    & .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        & .navegacion__logo {
+            & .navegacion__title a {
+                text-decoration: none;
+            }
+        }
+
+        & .navegacion__menu {
+            display: none;
+        }
+
+        & .form input {
+            width: 350px;
+            height: 30px;
+        }
+
+        & .navegacion__links {
+
+            display: flex;
+            & .navegacion__link {
+                list-style: none;
+                margin-left: 10px;
+
+                & a {
+                    text-decoration: none;
+                }
+
+                & .submenu {
+                    display:none;
+                    position: absolute;
+                    padding-left: 0;
+
+                    & li {
+                        background: red;
+                        list-style: none;
+                        text-decoration: none;
+                    }
+                }
+                &:hover > .submenu {
+                    display: block;
+                }
+                
+            }
+        }
+    }
+}
+
+.home {
+    min-height: 90vh;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    
+    & .home__bg {
+        background-image: url(../assets/bg.jpg);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+
+    & .home__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.productos {
+    & .container {
+        & .productos__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 10px;
+        }
+    }
+}
